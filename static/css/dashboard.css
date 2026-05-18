@@ -125,3 +125,33 @@ body{display:flex;min-height:100vh}
 ::-webkit-scrollbar-thumb{background:var(--border-hi);border-radius:3px}
 @media(max-width:900px){.settings-layout{grid-template-columns:1fr}}
 @media(max-width:680px){.main{padding:24px 20px}.stats-strip{grid-template-columns:1fr 1fr;display:grid}}
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    padding: 8px 16px;
+    border-right: none;
+    border-top: 1px solid var(--border);
+    z-index: 200;
+  }
+  .brand, .sidebar-stats, .webhook-badge { display: none; }
+  .nav { flex-direction: row; justify-content: space-around; width: 100%; gap: 0; }
+  .nav-item { flex-direction: column; gap: 4px; font-size: 11px; padding: 6px 8px; flex: 1; justify-content: center; align-items: center; text-align: center; }
+  .main { margin-left: 0; margin-bottom: 70px; padding: 20px 16px; }
+  .page-header { flex-direction: column; gap: 12px; }
+  .page-header h1 { font-size: 22px; }
+  .stats-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .campaigns-grid { grid-template-columns: 1fr; }
+  .settings-layout { grid-template-columns: 1fr; }
+  .modal { max-width: 100%; border-radius: 14px 14px 0 0; position: fixed; bottom: 70px; left: 0; right: 0; }
+  .modal-overlay { align-items: flex-end; padding: 0; }
+  .btn-row { flex-direction: column; }
+  .btn-primary, .btn-ghost { width: 100%; justify-content: center; }
+  .toast { bottom: 90px; right: 12px; left: 12px; max-width: 100%; }
+  }
