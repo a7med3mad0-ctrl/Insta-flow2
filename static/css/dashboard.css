@@ -155,3 +155,45 @@ body{display:flex;min-height:100vh}
   .btn-primary, .btn-ghost { width: 100%; justify-content: center; }
   .toast { bottom: 90px; right: 12px; left: 12px; max-width: 100%; }
   }
+@media (max-width: 768px) {
+  .activity-table-wrap {
+    border: none;
+  }
+
+  .activity-table thead {
+    display: none;
+  }
+
+  .activity-table tr {
+    display: block;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 12px;
+    padding: 14px;
+  }
+
+  .activity-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border: none;
+    font-size: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .activity-table td:last-child {
+    border-bottom: none;
+  }
+
+  .activity-table td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+  }
+                }
+
